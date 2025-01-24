@@ -1,0 +1,65 @@
+[2025-01-07 02:00:25,989] INFO: {
+    "abs_dir": "/home/diwang/siMLPe/exps/baseline_h36m",
+    "batch_size": 256,
+    "cos_lr_max": 1e-05,
+    "cos_lr_min": 5e-08,
+    "cos_lr_total_iters": 40000,
+    "data_aug": true,
+    "deriv_input": true,
+    "deriv_output": true,
+    "device": "cuda:2",
+    "h36m_anno_dir": "/home/diwang/siMLPe/data/h36m/",
+    "link_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_last.log",
+    "link_val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_last.log",
+    "log_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log",
+    "log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_2025_01_07_02_00_07.log",
+    "model_pth": null,
+    "motion": {
+        "dim": 66,
+        "h36m_input_length": 50,
+        "h36m_input_length_dct": 50,
+        "h36m_target_length": 10,
+        "h36m_target_length_eval": 25,
+        "h36m_target_length_train": 10
+    },
+    "motion_fc_in": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": false,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_fc_out": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": true,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_mlp": {
+        "hidden_dim": 66,
+        "norm_axis": "spatial",
+        "num_layers": 48,
+        "seq_len": 50,
+        "spatial_fc_only": false,
+        "with_normalization": true
+    },
+    "num_workers": 8,
+    "post_dct": false,
+    "pre_dct": false,
+    "print_every": 100,
+    "repo_name": "siMLPe",
+    "root_dir": "/home/diwang/siMLPe",
+    "save_every": 100,
+    "seed": 304,
+    "shift_step": 1,
+    "snapshot_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log/snapshot",
+    "this_dir": "baseline_h36m",
+    "use_relative_loss": true,
+    "val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_2025_01_07_02_00_07.log",
+    "weight_decay": 0.0001
+}
+[2025-01-07 02:00:34,892] INFO: Iter 100 Summary: 
+[2025-01-07 02:00:34,893] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.09109303593635559

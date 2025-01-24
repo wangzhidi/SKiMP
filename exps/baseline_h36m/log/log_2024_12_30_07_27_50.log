@@ -1,0 +1,176 @@
+[2024-12-30 07:28:08,627] INFO: {
+    "abs_dir": "/home/diwang/siMLPe/exps/baseline_h36m",
+    "batch_size": 256,
+    "cos_lr_max": 1e-05,
+    "cos_lr_min": 5e-08,
+    "cos_lr_total_iters": 40000,
+    "data_aug": true,
+    "deriv_input": true,
+    "deriv_output": true,
+    "h36m_anno_dir": "/home/diwang/siMLPe/data/h36m/",
+    "link_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_last.log",
+    "link_val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_last.log",
+    "log_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log",
+    "log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_2024_12_30_07_27_50.log",
+    "model_pth": null,
+    "motion": {
+        "dim": 66,
+        "h36m_input_length": 50,
+        "h36m_input_length_dct": 50,
+        "h36m_target_length": 10,
+        "h36m_target_length_eval": 25,
+        "h36m_target_length_train": 10
+    },
+    "motion_fc_in": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": false,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_fc_out": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": true,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_mlp": {
+        "hidden_dim": 66,
+        "norm_axis": "spatial",
+        "num_layers": 48,
+        "seq_len": 50,
+        "spatial_fc_only": false,
+        "with_normalization": true
+    },
+    "num_workers": 8,
+    "post_dct": false,
+    "pre_dct": false,
+    "print_every": 100,
+    "repo_name": "siMLPe",
+    "root_dir": "/home/diwang/siMLPe",
+    "save_every": 2000,
+    "seed": 304,
+    "shift_step": 100,
+    "snapshot_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log/snapshot",
+    "this_dir": "baseline_h36m",
+    "use_relative_loss": true,
+    "val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_2024_12_30_07_27_50.log",
+    "weight_decay": 0.0001
+}
+[2024-12-30 07:28:42,144] INFO: Iter 100 Summary: 
+[2024-12-30 07:28:42,145] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.09799813479185104
+[2024-12-30 07:29:12,812] INFO: Iter 200 Summary: 
+[2024-12-30 07:29:12,812] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07373845741152764
+[2024-12-30 07:29:42,183] INFO: Iter 300 Summary: 
+[2024-12-30 07:29:42,183] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07328183382749558
+[2024-12-30 07:30:15,576] INFO: Iter 400 Summary: 
+[2024-12-30 07:30:15,576] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07361358620226383
+[2024-12-30 07:30:48,746] INFO: Iter 500 Summary: 
+[2024-12-30 07:30:48,746] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07345935836434364
+[2024-12-30 07:31:19,893] INFO: Iter 600 Summary: 
+[2024-12-30 07:31:19,893] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07340576007962227
+[2024-12-30 07:31:53,789] INFO: Iter 700 Summary: 
+[2024-12-30 07:31:53,789] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07031724199652672
+[2024-12-30 07:32:27,064] INFO: Iter 800 Summary: 
+[2024-12-30 07:32:27,065] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.06601543627679347
+[2024-12-30 07:33:01,448] INFO: Iter 900 Summary: 
+[2024-12-30 07:33:01,448] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05965970724821091
+[2024-12-30 07:33:33,313] INFO: Iter 1000 Summary: 
+[2024-12-30 07:33:33,313] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.057040507085621354
+[2024-12-30 07:34:05,138] INFO: Iter 1100 Summary: 
+[2024-12-30 07:34:05,139] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05576026871800423
+[2024-12-30 07:34:37,651] INFO: Iter 1200 Summary: 
+[2024-12-30 07:34:37,651] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05490129679441452
+[2024-12-30 07:35:11,656] INFO: Iter 1300 Summary: 
+[2024-12-30 07:35:11,657] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05422377418726683
+[2024-12-30 07:35:46,305] INFO: Iter 1400 Summary: 
+[2024-12-30 07:35:46,305] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05364162642508745
+[2024-12-30 07:36:21,283] INFO: Iter 1500 Summary: 
+[2024-12-30 07:36:21,283] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05282602485269308
+[2024-12-30 07:36:57,394] INFO: Iter 1600 Summary: 
+[2024-12-30 07:36:57,395] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05248078729957342
+[2024-12-30 07:37:32,975] INFO: Iter 1700 Summary: 
+[2024-12-30 07:37:32,975] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05198571901768446
+[2024-12-30 07:38:07,711] INFO: Iter 1800 Summary: 
+[2024-12-30 07:38:07,711] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05124024152755737
+[2024-12-30 07:38:44,661] INFO: Iter 1900 Summary: 
+[2024-12-30 07:38:44,662] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.050573988929390905
+[2024-12-30 07:39:17,878] INFO: Iter 2000 Summary: 
+[2024-12-30 07:39:17,879] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.05033139586448669
+[2024-12-30 07:39:53,399] INFO: Iter 2100 Summary: 
+[2024-12-30 07:39:53,400] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04966240361332894
+[2024-12-30 07:40:28,702] INFO: Iter 2200 Summary: 
+[2024-12-30 07:40:28,702] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04909864634275436
+[2024-12-30 07:40:59,554] INFO: Iter 2300 Summary: 
+[2024-12-30 07:40:59,555] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.048905849568545816
+[2024-12-30 07:41:31,103] INFO: Iter 2400 Summary: 
+[2024-12-30 07:41:31,104] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.048872246369719506
+[2024-12-30 07:42:05,261] INFO: Iter 2500 Summary: 
+[2024-12-30 07:42:05,262] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.048292441815137865
+[2024-12-30 07:42:36,805] INFO: Iter 2600 Summary: 
+[2024-12-30 07:42:36,805] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.048012769147753716
+[2024-12-30 07:43:11,242] INFO: Iter 2700 Summary: 
+[2024-12-30 07:43:11,243] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04749939695000648
+[2024-12-30 07:43:45,647] INFO: Iter 2800 Summary: 
+[2024-12-30 07:43:45,647] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04766823805868626
+[2024-12-30 07:44:24,301] INFO: Iter 2900 Summary: 
+[2024-12-30 07:44:24,302] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04727144226431847
+[2024-12-30 07:45:00,479] INFO: Iter 3000 Summary: 
+[2024-12-30 07:45:00,480] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04677883267402649
+[2024-12-30 07:45:39,506] INFO: Iter 3100 Summary: 
+[2024-12-30 07:45:39,506] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04672334104776382
+[2024-12-30 07:46:16,895] INFO: Iter 3200 Summary: 
+[2024-12-30 07:46:16,895] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.046838227920234204
+[2024-12-30 07:46:52,097] INFO: Iter 3300 Summary: 
+[2024-12-30 07:46:52,098] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04629450500011444
+[2024-12-30 07:47:29,969] INFO: Iter 3400 Summary: 
+[2024-12-30 07:47:29,969] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.046171981915831564
+[2024-12-30 07:48:06,255] INFO: Iter 3500 Summary: 
+[2024-12-30 07:48:06,256] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.046178028471767905
+[2024-12-30 07:48:43,371] INFO: Iter 3600 Summary: 
+[2024-12-30 07:48:43,371] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.045613726899027825
+[2024-12-30 07:49:19,126] INFO: Iter 3700 Summary: 
+[2024-12-30 07:49:19,126] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04549380347132683
+[2024-12-30 07:49:52,176] INFO: Iter 3800 Summary: 
+[2024-12-30 07:49:52,177] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04507079713046551
+[2024-12-30 07:50:29,085] INFO: Iter 3900 Summary: 
+[2024-12-30 07:50:29,086] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.045412138812243937
+[2024-12-30 07:51:03,336] INFO: Iter 4000 Summary: 
+[2024-12-30 07:51:03,337] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04503018699586391
+[2024-12-30 07:51:39,879] INFO: Iter 4100 Summary: 
+[2024-12-30 07:51:39,880] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04485489036887884
+[2024-12-30 07:52:15,655] INFO: Iter 4200 Summary: 
+[2024-12-30 07:52:15,656] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.044165569506585595
+[2024-12-30 07:52:50,234] INFO: Iter 4300 Summary: 
+[2024-12-30 07:52:50,235] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04413034349679947
+[2024-12-30 07:53:22,355] INFO: Iter 4400 Summary: 
+[2024-12-30 07:53:22,355] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04389885231852531
+[2024-12-30 07:53:56,354] INFO: Iter 4500 Summary: 
+[2024-12-30 07:53:56,354] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04314626757055521
+[2024-12-30 07:54:29,963] INFO: Iter 4600 Summary: 
+[2024-12-30 07:54:29,963] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04289119753986597
+[2024-12-30 07:55:07,203] INFO: Iter 4700 Summary: 
+[2024-12-30 07:55:07,204] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04249106843024492
+[2024-12-30 07:55:42,093] INFO: Iter 4800 Summary: 
+[2024-12-30 07:55:42,094] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.042674381397664544
+[2024-12-30 07:56:20,432] INFO: Iter 4900 Summary: 
+[2024-12-30 07:56:20,432] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04163993638008833
+[2024-12-30 07:56:58,203] INFO: Iter 5000 Summary: 
+[2024-12-30 07:56:58,203] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04148235719650984
+[2024-12-30 07:57:35,487] INFO: Iter 5100 Summary: 
+[2024-12-30 07:57:35,487] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.040875296592712405
+[2024-12-30 07:58:08,959] INFO: Iter 5200 Summary: 
+[2024-12-30 07:58:08,959] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.04088460724800825
+[2024-12-30 07:58:49,075] INFO: Iter 5300 Summary: 
+[2024-12-30 07:58:49,076] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.039769915640354155
+[2024-12-30 07:59:24,050] INFO: Iter 5400 Summary: 
+[2024-12-30 07:59:24,051] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.03927332922816276
+[2024-12-30 07:59:56,548] INFO: Iter 5500 Summary: 
+[2024-12-30 07:59:56,549] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.03864670623093844
+[2024-12-30 08:00:35,093] INFO: Iter 5600 Summary: 
+[2024-12-30 08:00:35,093] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.038672508001327516
+[2024-12-30 08:01:17,015] INFO: Iter 5700 Summary: 
+[2024-12-30 08:01:17,016] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.03839267682284117

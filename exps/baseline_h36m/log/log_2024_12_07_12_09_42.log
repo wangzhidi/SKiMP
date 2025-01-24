@@ -1,0 +1,74 @@
+[2024-12-07 12:09:59,102] INFO: {
+    "abs_dir": "/home/diwang/siMLPe/exps/baseline_h36m",
+    "batch_size": 256,
+    "cos_lr_max": 1e-05,
+    "cos_lr_min": 5e-08,
+    "cos_lr_total_iters": 40000,
+    "data_aug": true,
+    "deriv_input": true,
+    "deriv_output": true,
+    "h36m_anno_dir": "/home/diwang/siMLPe/data/h36m/",
+    "link_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_last.log",
+    "link_val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_last.log",
+    "log_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log",
+    "log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/log_2024_12_07_12_09_42.log",
+    "model_pth": null,
+    "motion": {
+        "dim": 66,
+        "h36m_input_length": 50,
+        "h36m_input_length_dct": 50,
+        "h36m_target_length": 10,
+        "h36m_target_length_eval": 25,
+        "h36m_target_length_train": 10
+    },
+    "motion_fc_in": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": false,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_fc_out": {
+        "activation": "relu",
+        "in_features": 66,
+        "init_w_trunc_normal": true,
+        "out_features": 66,
+        "temporal_fc": false,
+        "with_norm": false
+    },
+    "motion_mlp": {
+        "hidden_dim": 66,
+        "norm_axis": "spatial",
+        "num_layers": 48,
+        "seq_len": 50,
+        "spatial_fc_only": false,
+        "with_normalization": true
+    },
+    "num_workers": 8,
+    "post_dct": false,
+    "pre_dct": false,
+    "print_every": 100,
+    "repo_name": "siMLPe",
+    "root_dir": "/home/diwang/siMLPe",
+    "save_every": 5000,
+    "seed": 304,
+    "shift_step": 1,
+    "snapshot_dir": "/home/diwang/siMLPe/exps/baseline_h36m/log/snapshot",
+    "this_dir": "baseline_h36m",
+    "use_relative_loss": true,
+    "val_log_file": "/home/diwang/siMLPe/exps/baseline_h36m/log/val_2024_12_07_12_09_42.log",
+    "weight_decay": 0.0001
+}
+[2024-12-07 12:10:08,777] INFO: Iter 100 Summary: 
+[2024-12-07 12:10:08,778] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.09880959816277027
+[2024-12-07 12:10:16,302] INFO: Iter 200 Summary: 
+[2024-12-07 12:10:16,302] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07526146709918975
+[2024-12-07 12:10:23,809] INFO: Iter 300 Summary: 
+[2024-12-07 12:10:23,810] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07434968195855618
+[2024-12-07 12:10:31,361] INFO: Iter 400 Summary: 
+[2024-12-07 12:10:31,361] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.07023919731378556
+[2024-12-07 12:10:38,904] INFO: Iter 500 Summary: 
+[2024-12-07 12:10:38,904] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.06818793103098869
+[2024-12-07 12:10:46,440] INFO: Iter 600 Summary: 
+[2024-12-07 12:10:46,440] INFO: 	 lr: 0.00030000000000000073 	 Training loss: 0.06507122348994017
