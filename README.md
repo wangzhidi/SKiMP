@@ -1,48 +1,52 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# SkiMP
+**SKiMP: Sketch Guided Human Motion Prediction** 
 
+A simple-yet-effective network achieving **SOTA** performance.
 
-Example project pages built using this template are:
-- https://vision.huji.ac.il/spectral_detuning/
-- https://vision.huji.ac.il/podd/
-- https://dreamix-video-editing.github.io
-- https://vision.huji.ac.il/conffusion/
-- https://vision.huji.ac.il/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad/
-- https://vision.huji.ac.il/deepsim/
+In this paper, we propose SKiMP, a method for predicting future motions guided by simple sketches drawn by the user. To enable this, we constructed a large-scale sketch dataset consisting of 250K program-generated and 2K hand-drawn high-resolution sketches. Based on this dataset, we train a feature extractor using contrastive learning to map joint information and sketch images into a shared feature space, minimizing the distance between paired examples. Using this feature extractor, we incorporate joint features during training and employ sketch features that are highly similar to the joint features during inference. This guides the model to generate future motion sequences that align with both historical observations and the user’s sketch guidance. Additionally, we find that even simple, abstract sketches containing future motion information can significantly improve long-term prediction performance. This is confirmed by experiments on the Human3.6M dataset.
 
 
 
-## Start using the template
-To start using the template click on `Use this Template`.
+### Network Architecture
+------
+![image](static\images\fig2.png)
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+We first collected the Pose Sketch Dataset using both procedural generation and hand-drawing methods. Then we use contrastive learning to map joint coordinates and sketch images into a shared feature space. Finally, we incorporate joint features during model training and sketch features as guidance during testing, generating future motions that align with both historical motion patterns and the user-provided sketch.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+### Requirements
+------
+- PyTorch >= 1.5
+- Numpy
+- CUDA >= 10.1
+- Easydict
+- pickle
+- einops
+- scipy
+- six
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+### Data Preparation
+------
+Download Human3.6M files and put them in the `./data` directory.
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+[Original stanford link](http://www.cs.stanford.edu/people/ashesh/h3.6m.zip)
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Directory structure:
+```shell script
+data
+|-- h36m
+|   |-- S1
+|   |-- S5
+|   |-- S6
+|   |-- ...
+|   |-- S11
+```
+
+
+### Training
+------
+#### H3.6M
+```bash
+cd exps/baseline_h36m/
+sh run.sh
+```
