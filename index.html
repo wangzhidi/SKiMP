@@ -226,16 +226,16 @@
           <!-- 左侧pose列 -->
           <div class="image-column">
             <h3 class="title is-5">Select Pose Here</h3>
-            <img src="static/images/tmp0.gif" class="thumbnail pose-thumbnail" data-idx="0" alt="Pose 0">
-            <img src="static/images/tmp1.gif" class="thumbnail pose-thumbnail" data-idx="1" alt="Pose 1">
-            <img src="static/images/tmp2.gif" class="thumbnail pose-thumbnail" data-idx="2" alt="Pose 2">
-            <img src="static/images/tmp3.gif" class="thumbnail pose-thumbnail" data-idx="3" alt="Pose 3">
-            <img src="static/images/tmp4.gif" class="thumbnail pose-thumbnail" data-idx="4" alt="Pose 4">
-            <img src="static/images/tmp5.gif" class="thumbnail pose-thumbnail" data-idx="5" alt="Pose 5">
-            <img src="static/images/tmp6.gif" class="thumbnail pose-thumbnail" data-idx="6" alt="Pose 6">
-            <img src="static/images/tmp7.gif" class="thumbnail pose-thumbnail" data-idx="7" alt="Pose 7">
-            <img src="static/images/tmp8.gif" class="thumbnail pose-thumbnail" data-idx="8" alt="Pose 8">
-            <img src="static/images/tmp9.gif" class="thumbnail pose-thumbnail" data-idx="9" alt="Pose 9">
+            <img src="static/output/gt0.gif" class="thumbnail pose-thumbnail" data-idx="0" alt="Pose 0">
+            <img src="static/output/gt1.gif" class="thumbnail pose-thumbnail" data-idx="1" alt="Pose 1">
+            <img src="static/output/gt2.gif.gif" class="thumbnail pose-thumbnail" data-idx="2" alt="Pose 2">
+            <img src="static/output/gt3.gif" class="thumbnail pose-thumbnail" data-idx="3" alt="Pose 3">
+            <img src="static/output/gt4.gif" class="thumbnail pose-thumbnail" data-idx="4" alt="Pose 4">
+            <img src="static/output/gt5.gif" class="thumbnail pose-thumbnail" data-idx="5" alt="Pose 5">
+            <img src="static/output/gt6.gif" class="thumbnail pose-thumbnail" data-idx="6" alt="Pose 6">
+            <img src="static/output/gt7.gif" class="thumbnail pose-thumbnail" data-idx="7" alt="Pose 7">
+            <img src="static/output/gt8.gif" class="thumbnail pose-thumbnail" data-idx="8" alt="Pose 8">
+            <img src="static/output/gt9.gif" class="thumbnail pose-thumbnail" data-idx="9" alt="Pose 9">
           </div>
   
           <!-- 中间结果展示 -->
@@ -249,6 +249,13 @@
               <img src="static/images/000_0001.png" class="thumbnail sketch-thumbnail" data-idx="0">
               <img src="static/images/000_1270.png" class="thumbnail sketch-thumbnail" data-idx="1">
               <img src="static/images/002_1006.png" class="thumbnail sketch-thumbnail" data-idx="2">
+              <img src="static/images/002_1236.png" class="thumbnail sketch-thumbnail" data-idx="3">
+              <img src="static/images/004_1074.png" class="thumbnail sketch-thumbnail" data-idx="4">
+              <img src="static/images/004_1198.png" class="thumbnail sketch-thumbnail" data-idx="5">
+              <img src="static/images/005_1103.png" class="thumbnail sketch-thumbnail" data-idx="6">
+              <img src="static/images/006_2309.png" class="thumbnail sketch-thumbnail" data-idx="7">
+              <img src="static/images/013_0695.png" class="thumbnail sketch-thumbnail" data-idx="8">
+              <img src="static/images/026_0732.png" class="thumbnail sketch-thumbnail" data-idx="9">
               <!-- 其他sketch图片... -->
           </div>
       </div>
@@ -287,7 +294,7 @@
   function updateResultImage() {
       if (selectedPose !== null && selectedSketch !== null) {
           // 根据实际文件路径规则构造URL
-          const resultUrl = `static/images/results/pose${selectedPose}_sketch${selectedSketch}.png`;
+          const resultUrl = `static/output/result${selectedPose}_${selectedSketch}.gif`;
           document.getElementById('result-image').src = resultUrl;
       }
   }
